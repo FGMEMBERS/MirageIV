@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+ 
+  <!-- ACCEL -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/accel/accel.xml</path>
+    <offsets>
+      <x-m>  0.028 </x-m>
+      <y-m>  0.013 </y-m>
+      <z-m>  0.306 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- CLOCK -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m>  0.030 </x-m>
+      <y-m> -0.082 </y-m>
+      <z-m>  0.302 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.028 </x-m>
+      <y-m> -0.215 </y-m>
+      <z-m>  0.122 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> 0.028 </x-m>
+      <y-m> 0.121 </y-m>
+      <z-m> 0.214 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.028 </x-m>
+      <y-m> -0.121 </y-m>
+      <z-m>  0.214 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ADI -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/adi/adi.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -0.121 </y-m>
+      <z-m>  0.120 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- kcs55 -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/kcs55/ki525a.xml</path>
+    <offsets>
+      <x-m> 0.033 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.197 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- kcs55 -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/kcs55/ka51b.xml</path>
+    <offsets>
+      <x-m>  0.028 </x-m>
+      <y-m> -0.112 </y-m>
+      <z-m> -0.021 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- PRESSURE -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/pressure/pression.xml</path>
+    <offsets>
+      <x-m> 0.029 </x-m>
+      <y-m> 0.207 </y-m>
+      <z-m> 0.183 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- FUEL -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m> 0.028 </x-m>
+      <y-m> 0.110 </y-m>
+      <z-m> 0.135 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- UHF-BOX -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/uhf-box/uhf-box.xml</path>
+    <offsets>
+      <x-m> 0.029 </x-m>
+      <y-m> 0.087 </y-m>
+      <z-m> 0.010 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- THROTTLE -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/throttle/throttle.xml</path>
+    <offsets>
+      <x-m>  0.200 </x-m>
+      <y-m> -0.400 </y-m>
+      <z-m> -0.046 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- NAV LIGHT -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.027 </x-m>
+      <y-m> -0.036 </y-m>
+      <z-m>  0.287 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+

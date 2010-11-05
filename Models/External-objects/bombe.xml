@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>bombe.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>bombe</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>bombe</object-name>
+  </effect>
+
+  <animation>
+    <type>select</type>
+    <object-name>bombe</object-name>
+    <condition>
+      <not>
+        <property>sim/model/hide-bombe</property>
+      </not>
+    </condition>
+  </animation>
+
+</PropertyList>
+

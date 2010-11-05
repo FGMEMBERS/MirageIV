@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+Mirage IV
+October 2010 : Flavien BLANC
+************************************************************************
+-->
+
+<PropertyList include="mirageIV-base.xml">
+
+  <sim>
+
+    <description>Mirage IV (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>mirageIV-yasim</aero>
+
+  </sim>
+  
+</PropertyList>
+

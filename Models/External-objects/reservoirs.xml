@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>reservoirs.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>reservoirs</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>reservoirs</object-name>
+  </effect>
+
+  <animation>
+    <type>select</type>
+    <object-name>reservoirs</object-name>
+    <condition>
+      <not>
+        <property>sim/model/hide-reservoirs</property>
+      </not>
+    </condition>
+  </animation>
+
+</PropertyList>
+
