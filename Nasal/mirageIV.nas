@@ -1,98 +1,65 @@
+# ================================== Chute ==================================================
 
-#
-# Ce fichier, donné ici en exemple et provenant d'un autre avion, contient du code 
-# en Nasal que vous écrirez en fonction de vos besoin.
-# Ce fichier doit être référencé depuis votre fichier <avion>-set.xml dans un bloc
-# de type <nasal>...</nasal> afin qu'il puisse être pris en compte.
-# Lors du chargement de l'avion, regardez la console, c'est à cet endroit que vous
-# verrez des éventuelles erreurs de votre script, ce qui est bien pratique pour 
-# vous aider à le debugger.
-#
+controls.deployChute = func(v){
 
-var Mig31throttle0 = props.globals.getNode("/controls/engines/engine[0]/throttle");
-var Mig31throttle1 = props.globals.getNode("/controls/engines/engine[1]/throttle");
-var Mig31reheat0 = props.globals.getNode("/controls/engines/engine[0]/reheat");
-var Mig31reheat1 = props.globals.getNode("/controls/engines/engine[1]/reheat");
-
-var MPthrottle0 = props.globals.getNode("/sim/multiplay/generic/float[0]");
-var MPthrottle1 = props.globals.getNode("/sim/multiplay/generic/float[1]");
-var MPreheat0 = props.globals.getNode("/sim/multiplay/generic/float[2]");
-var MPreheat1 = props.globals.getNode("/sim/multiplay/generic/float[3]");
-
-
-var ManageThrottle0 = func 
-{
-	if (Mig31throttle0.getValue() >= 0.98) 
-	{
-		Mig31reheat0.setValue(1);
+	# Deploy
+	if (v > 0){
+		setprop("sim/model/MirageIV/controls/flight/chute_deployed",1);
+		setprop("sim/model/MirageIV/controls/flight/chute_open",1);
+		chuteAngle();
 	}
-	elsif (Mig31throttle0.getValue() <= 0.95)
-	{
-		Mig31reheat0.setValue(0);
+	# Jettison
+	if (v < 0){ 
+		var voltage = getprop("systems/electrical/outputs/chute_jett");
+		if (voltage > 20) {
+			setprop("sim/model/MirageIV/controls/flight/chute_jettisoned",1);
+			setprop("sim/model/MirageIV/controls/flight/chute_open",1);
+		}
 	}
-	# Pass throttle value over MP.
-	MPthrottle0.setValue(Mig31throttle0.getValue());
 }
 
-var ManageThrottle1 = func 
-{
-	if (Mig31throttle1.getValue() >= 0.98) 
-	{
-		Mig31reheat1.setValue(1);
+
+var chuteAngle = func {
+
+	var chute_open = getprop('sim/model/MirageIV/controls/flight/chute_open');
+	
+	if (chute_open != '1') {return();}
+
+	var speed = getprop('velocities/airspeed-kt');
+	var aircraftpitch = getprop('orientation/pitch-deg[0]');
+	var aircraftyaw = getprop('orientation/side-slip-deg');
+	var chuteyaw = getprop("sim/model/MirageIV/orientation/chute_yaw");
+	var aircraftroll = getprop('orientation/roll-deg');
+
+	if (speed > 210) {
+		setprop("sim/model/MirageIV/controls/flight/chute_jettisoned", 1); # Model Shear Pin
+		return();
 	}
-	elsif (Mig31throttle1.getValue() <= 0.95)
-	{
-		Mig31reheat1.setValue(0);
-	}
-	# Pass throttle value over MP.
-	MPthrottle1.setValue(Mig31throttle1.getValue());
-}
 
-setlistener("/controls/engines/engine[0]/throttle", ManageThrottle0, 1);
-setlistener(Mig31throttle1, ManageThrottle1, 1);
+	# Chute Pitch
+	var chutepitch = aircraftpitch * -1;
+	setprop("sim/model/MirageIV/orientation/chute_pitch", chutepitch);
 
+	# Damped yaw from Vivian's A4 work
+	var n = 0.01;
+	if (aircraftyaw == nil) {aircraftyaw = 0;}
+	if (chuteyaw == nil) {chuteyaw = 0;}
+	var chuteyaw = ( aircraftyaw * n) + ( chuteyaw * (1 - n));	
+	setprop("sim/model/MirageIV/orientation/chute_yaw", chuteyaw);
 
-#
-# Pass reheat values over MP when a change triggers.
-#
-setlistener(Mig31reheat0, func {
-	MPreheat0.setValue(Mig31reheat0.getValue());
-});
+	# Chute Roll - no twisting for now
+	var chuteroll = aircraftroll;
+	setprop("sim/model/MirageIV/orientation/chute_roll", chuteroll*rand()*-1 );
 
-setlistener(Mig31reheat1, func {
-	MPreheat1.setValue(Mig31reheat1.getValue());
-});
+	return registerTimerControlsNil(chuteAngle);	# Keep watching
 
+} # end function
 
-#
-# Make tail rudder vibrate if mach number is greater than 2.90.
-# Vibration level increases as the mach number gets higher.
-#
-var coef = 1;
-var vibration_level = func
-{
-	var mach = getprop("/velocities/mach");
-	if(mach >= 2.95)
-	{
-		var aleat = 0.55 * rand();
-		var offset = coef * (mach - 2.90) * aleat;
-		setprop("/controls/flight/elevator-trim", offset);
-		coef = -coef;
-	}
-	settimer(vibration_level, 0.080);
-}
+#var chuteRepack = func{#
 
-settimer(vibration_level, 0.125);
+	#setprop('sim/model/MirageIV/controls/flight/chute_open', 0);#
+	#setprop('sim/model/MirageIV/controls/flight/chute_deployed', 0);#
+	#setprop('sim/model/MirageIV/controls/flight/chute_jettisoned', 0);#
 
-#
-# Light management.
-#
-var strobe = aircraft.light.new("/sim/model/lights/strobe1", [0.10, 0.90]);
-strobe.interval = 0;
-strobe.switch(1);
-
-
-#
-# End of file.
-#
+ #}  end func	#
 

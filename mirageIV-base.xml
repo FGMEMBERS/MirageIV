@@ -25,6 +25,15 @@
       <path>Aircraft/MirageIV/Sounds/mirageIV-sound.xml</path>
     </sound>
 
+    <rendering>
+      <redout>
+        <parameters>
+          <blackout-complete-g>9</blackout-complete-g>
+          <blackout-onset-g>6</blackout-onset-g>
+        </parameters>
+      </redout>
+    </rendering>
+	
     <multiplay>
       <chat_display>1</chat_display>
       <generic> 
@@ -66,7 +75,8 @@
     </help>
 
     <menubar include="Dialogs/mirageIV-menu.xml"/>
-
+ 
+	
   </sim>
 
   <controls>
@@ -110,12 +120,23 @@
         <position-norm type="float">0</position-norm>
       </passenger>
     </doors>
+    <radar>
+      <range type="int" archive="y">20</range>
+      <minimized type="bool" archive="y">false</minimized>
+    </radar>
   </instrumentation>
 
   <input>
     <keyboard include="Nasal/mirageIV-keyboard.xml"/>
   </input>
  
+  <systems>
+    <refuel>
+      <type>probe</type>
+      <serviceable type="bool">true</serviceable>
+    </refuel>
+  </systems>
+
   <nasal>
     <doors>
       <file>Aircraft/MirageIV/Nasal/doors.nas</file>
@@ -127,7 +148,11 @@
             <script><![CDATA[
               KCS55.new();
             ]]></script>
+      <file>Aircraft/MirageIV/Nasal/mirageIV.nas</file>
     </mirageIV>
+    <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+    </aar>
   </nasal>
 
 </PropertyList>

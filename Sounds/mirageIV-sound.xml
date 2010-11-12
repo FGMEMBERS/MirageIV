@@ -5,7 +5,7 @@
     <engine>
       <name>turbine</name>
       <mode>looped</mode>
-      <path>Aircraft/MirageIV/Sounds/engine-turbine.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Turbine1.wav</path>
       <condition>
         <property>/engines/engine/running</property>
         <not>
@@ -39,7 +39,7 @@
     <engine>
       <name>turbine interior</name>
       <mode>looped</mode>
-      <path>Aircraft/MirageIV/Sounds/engine-turbine.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Turbine1.wav</path>
       <condition>
         <and>
           <property>/engines/engine/running</property>
@@ -72,7 +72,7 @@
 
     <engine>
       <name>thrust lowfreq exterior</name>
-      <path>Aircraft/MirageIV/Sounds/engine-lowfreq.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Turbine2.wav</path>
       <mode>looped</mode>
       <condition>
         <property>/engines/engine/running</property>
@@ -93,7 +93,7 @@
 	
     <engine>
       <name>thrust lowfreq interior</name>
-      <path>Aircraft/MirageIV/Sounds/engine-lowfreq.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Turbine2.wav</path>
       <mode>looped</mode>
       <condition>
         <and>
@@ -114,7 +114,7 @@
 	
     <engine>
       <name>burner lowfreq</name>
-      <path>Aircraft/MirageIV/Sounds/burner-lowfreq.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Sonic-Boom.wav</path>
       <mode>once</mode>    
       <property>controls/engines/engine/reheat</property>
       <volume>
@@ -126,7 +126,7 @@
 
     <engine>
       <name>burner lowfreq loop</name>
-      <path>Aircraft/MirageIV/Sounds/engine-lowfreq.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Sonic-Boom.wav</path>
       <mode>looped</mode>
       <property>controls/engines/engine/reheat</property>
       <volume>
@@ -138,7 +138,7 @@
 	
     <engine>
       <name>burner loop</name>
-      <path>Aircraft/MirageIV/Sounds/reheat.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Sonic-Boom.wav</path>
       <mode>looped</mode>
       <condition>
         <property>/engines/engine/running</property>
@@ -167,7 +167,7 @@
     <wind>
       <name>wind</name>
       <mode>looped</mode>
-      <path>Sounds/wind.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Wind.wav</path>
       <condition>
         <not> 
           <property>/sim/current-view/internal</property>
@@ -244,7 +244,7 @@
 
     <squeal>
       <name>squeal</name>
-      <path>Sounds/squeal.wav</path>
+      <path>Aircraft/MirageIV/Sounds/BaBoOn-mirageIV-Tire-Squeal.wav</path>
       <condition>
         <or>
           <property>/gear/gear[0]/wow</property>
