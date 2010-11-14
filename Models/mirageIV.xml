@@ -60,7 +60,7 @@
     <object-name>roueG1</object-name>
     <object-name>roueG2</object-name>
     <object-name>axeD</object-name>
-    <object-name>roueD</object-name>
+    <object-name>roueD1</object-name>
     <object-name>roueD2</object-name>
 
     <!-- Objets transparents -->
@@ -102,7 +102,7 @@
     <object-name>roueG1</object-name>
     <object-name>roueG2</object-name>
     <object-name>axeD</object-name>
-    <object-name>roueD</object-name>
+    <object-name>roueD1</object-name>
     <object-name>roueD2</object-name>
 
 
@@ -189,9 +189,11 @@
     <object-name>axeA</object-name>
     <object-name>roueA</object-name>
     <object-name>axeG</object-name>
-    <object-name>roueG</object-name>
+    <object-name>roueG1</object-name>
+    <object-name>roueG2</object-name>
     <object-name>axeD</object-name>
-    <object-name>roueD</object-name>
+    <object-name>roueD1</object-name>
+    <object-name>roueD2/object-name>
     <condition>
       <not>
         <equals>
@@ -651,7 +653,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RoueGauche</object-name>
-    <property>gear/gear[1]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 90 </dep></entry>
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
@@ -671,7 +673,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RoueGauche</object-name>
-    <property>gear/gear[1]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 15 </dep></entry>
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
@@ -689,10 +691,15 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>LesRouesGauches</name>
     <object-name>roueG1</object-name>
     <object-name>roueG2</object-name>
-    <property>gear/gear[1]/position-norm</property>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LesRouesGauches</object-name>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -15 </dep></entry>
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
@@ -719,7 +726,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RoueDroite</object-name>
-    <property>gear/gear[2]/position-norm</property>
+    <property>gear/gear[6]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -90 </dep></entry>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
@@ -739,7 +746,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RoueDroite</object-name>
-    <property>gear/gear[2]/position-norm</property>
+    <property>gear/gear[6]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 15 </dep></entry>
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
@@ -757,10 +764,15 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>LesRouesDroites</name>
     <object-name>roueD1</object-name>
     <object-name>roueD2</object-name>
-    <property>gear/gear[2]/position-norm</property>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LesRouesDroites</object-name>
+    <property>gear/gear[6]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -15 </dep></entry>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
@@ -940,7 +952,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueG1</object-name>
-    <property>gear/gear[1]/rollspeed-ms</property>
+    <property>gear/gear[2]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m>  3.448 </x-m>
@@ -957,7 +969,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueG2</object-name>
-    <property>gear/gear[1]/rollspeed-ms</property>
+    <property>gear/gear[4]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m>  4.348 </x-m>
@@ -974,7 +986,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueD1</object-name>
-    <property>gear/gear[2]/rollspeed-ms</property>
+    <property>gear/gear[6]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m>  3.448 </x-m>
@@ -991,7 +1003,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueD2</object-name>
-    <property>gear/gear[2]/rollspeed-ms</property>
+    <property>gear/gear[8]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m>  4.348 </x-m>

@@ -183,7 +183,7 @@
         <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="-0.2" dst1="0.2"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
 
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
@@ -196,13 +196,13 @@
         damp="2"
         upx="0.25" upy="0" upz="1">
 
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
         <control-speed control="EXTEND" transition-time="7"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   </gear>
 
   <gear x="-3.448" y="2.345" z="-2.517"
@@ -213,13 +213,13 @@
 	
         upx="0.25" upy="0" upz="1">
 
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
         <control-speed control="EXTEND" transition-time="7"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
   </gear>
   
   <gear x="-4.348" y="2.795" z="-2.517"
@@ -230,13 +230,13 @@
 		
         upx="0.25" upy="0" upz="1">
 
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
         <control-speed control="EXTEND" transition-time="7"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[4]/position-norm"/>
   </gear>
   
   <gear x="-4.348" y="2.345" z="-2.517"
@@ -247,13 +247,13 @@
 		
         upx="0.25" upy="0" upz="1">
 
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
         <control-speed control="EXTEND" transition-time="7"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[5]/position-norm"/>
   </gear>
   
   <!-- Roues droites x -3.893 -->
@@ -271,7 +271,7 @@
 
         <control-speed control="EXTEND" transition-time="7"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[6]/position-norm"/>
   </gear>
 
   <gear x="-3.448" y="-2.345" z="-2.517"
@@ -288,7 +288,7 @@
 
         <control-speed control="EXTEND" transition-time="7"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[7]/position-norm"/>
   </gear>
   
   <gear x="-4.348" y="-2.795" z="-2.517"
@@ -305,7 +305,7 @@
 
         <control-speed control="EXTEND" transition-time="7"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[8]/position-norm"/>
   </gear>
   
    <gear x="-4.348" y="-2.345" z="-2.517"
@@ -322,7 +322,7 @@
 
         <control-speed control="EXTEND" transition-time="7"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[9]/position-norm"/>
   </gear>
 
   <!--Pour test des animations des trains
