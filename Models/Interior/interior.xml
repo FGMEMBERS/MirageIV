@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>intcanope1</object-name>
+    <object-name>intcanope2</object-name>
+    <object-name>inttour</object-name>
+    <object-name>inttourcanope1</object-name>
+    <object-name>inttourcanope2</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitres1</object-name>
+    <object-name>intvitres2</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+    <object-name>intvitres1</object-name>
+    <object-name>intvitres2</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+    <object-name>intvitres1</object-name>
+    <object-name>intvitres2</object-name>
+  </animation>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -6.139 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.341 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -5.474 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.298 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Co Pilote -->
+  <model>
+    <path>Aircraft/MirageIV/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -3.853 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.298 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Canopy -->
+  <animation>
+    <name>IntCanopeAvant</name>
+    <object-name>intcanope1</object-name>
+    <object-name>inttourcanope1</object-name>
+    <object-name>intvitres1</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntCanopeAvant</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 45 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.794 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.386 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>IntCanopeArriere</name>
+    <object-name>intcanope2</object-name>
+    <object-name>inttourcanope2</object-name>
+    <object-name>intvitres2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntCanopeArriere</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 45 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.233 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.386 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

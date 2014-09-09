@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel / Flavien BLANC</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>0.1 Alpha</status>
+
+    <fuel-fraction>0.8</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/MirageIV/mirageIV-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/MirageIV/Models/mirageIV.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <sound>
+      <path>Aircraft/MirageIV/Sounds/mirageIV-sound.xml</path>
+    </sound>
+
+    <rendering>
+      <redout>
+        <parameters>
+          <blackout-complete-g>9</blackout-complete-g>
+          <blackout-onset-g>6</blackout-onset-g>
+        </parameters>
+      </redout>
+    </rendering>
+	
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int">0</int>  <!-- 0 immat -->
+        <int type="int">0</int>  <!-- 1 immat -->
+        <int type="int">0</int>  <!-- 2 immat -->
+        <int type="int">0</int>  <!-- 3 immat -->
+        <int type="int">0</int>  <!-- 4 immat -->
+        <int type="int">0</int>  <!-- 5 immat -->
+        <int type="bool">0</int> <!-- 6 smoke -->
+        <int type="int">0</int>  <!-- 7 color -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+      </generic>
+    </multiplay>
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.50 </setting>
+      <setting> 0.75 </setting>
+      <setting> 1.00 </setting>
+    </flaps>
+
+    <help>
+      <title>MirageIV</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Open/Close side windows</desc>
+      </key>
+      <key>
+        <name>e</name>
+        <desc>Open/Close parachute</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/mirageIV-menu.xml"/>
+ 
+	
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+	<boost type="double">0</boost>
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="1">
+	<boost type="double">0</boost>
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+  </controls>
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <rpm>500</rpm>
+      <running>false</running>
+    </engine>
+    <engine n="1">
+      <engine-num type="int">1</engine-num>
+      <rpm>500</rpm>
+      <running>false</running>
+    </engine>
+  </engines>
+
+  <instrumentation>
+    <kcs55 include="Models/Interior/Panel/Instruments/kcs55/kcs55.xml"/>
+    <kcs55 n="0">
+    <ka51>
+      <slaved>true</slaved>
+    </ka51>
+    </kcs55>
+    <doors>
+      <crew>
+        <position-norm type="float">0</position-norm>
+      </crew>
+      <passenger>
+        <position-norm type="float">0</position-norm>
+      </passenger>
+    </doors>
+    <radar>
+      <range type="int" archive="y">20</range>
+      <minimized type="bool" archive="y">false</minimized>
+    </radar>
+  </instrumentation>
+
+  <input>
+    <keyboard include="Nasal/mirageIV-keyboard.xml"/>
+  </input>
+ 
+  <controls>
+    <gear>
+      <brake-parking type="double"> 1 </brake-parking>
+    </gear>
+  </controls>
+
+  <systems>
+    <refuel>
+      <type>probe</type>
+      <serviceable type="bool">true</serviceable>
+    </refuel>
+  </systems>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/MirageIV/Nasal/doors.nas</file>
+    </doors>
+    <mirageIV>
+      <file>Aircraft/MirageIV/Nasal/liveries.nas</file>
+      <file>Aircraft/MirageIV/Nasal/light.nas</file>
+      <file>Aircraft/MirageIV/Models/Interior/Panel/Instruments/kcs55/kcs55.nas</file>
+            <script><![CDATA[
+              KCS55.new();
+            ]]></script>
+      <file>Aircraft/MirageIV/Nasal/mirageIV.nas</file>
+    </mirageIV>
+    <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+    </aar>
+  </nasal>
+
+</PropertyList>
+

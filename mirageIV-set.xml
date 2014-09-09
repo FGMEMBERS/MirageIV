@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="mirageIV-jsbsim-cnf.xml"> -->
+<PropertyList include="mirageIV-yasim-cnf.xml">
+
+  <sim>
+    <description>Mirage IV</description>
+    <author>BARANGER Emmanuel / Flavien BLANC</author>
+  </sim>
+
+</PropertyList>
+

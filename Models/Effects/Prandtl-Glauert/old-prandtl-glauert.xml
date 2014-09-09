@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Basé sur l'effet du F14b -->
+
+<PropertyList>
+
+  <path>prandtl-glauert.ac</path>
+
+  <animation>
+    <!-- Objets transparents -->
+    <object-name>Prandtl-Glauert</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Prandtl-Glauert</object-name>
+  </animation>
+
+  <!-- ******************************************************************* -->
+  <!-- Condensation mach => 0.8 et altitude <= 5000 ft                     -->
+  <!-- ******************************************************************* -->
+  <animation>
+    <type>select</type>
+    <object-name>Prandtl-Glauert</object-name>
+    <condition>
+      <and>
+        <greater-than>
+            <property>/velocities/mach</property>
+            <value> 0.8 </value>
+          </greater-than>
+          <less-than>
+            <property>/position/altitude-ft</property>
+            <value> 5000 </value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+<!--
+  <animation>
+    <type>textranslate</type>
+    <object-name>Prandtl-Glauert</object-name>
+    <property>sim/model/f-14b/fx/burner</property>
+    <factor>-0.23437</factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+-->
+</PropertyList>
