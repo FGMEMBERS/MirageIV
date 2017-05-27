@@ -6,6 +6,23 @@
   <sim>
     <description>Mirage IV</description>
     <author>BARANGER Emmanuel / Flavien BLANC</author>
+
+    <tags>
+      <tag>bomber</tag>
+      <tag>reconnaissance</tag>
+      <tag>dassault</tag>
+      <tag>1960s</tag>
+      <tag>1970s</tag>
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>delta</tag>
+      <tag>retractable-gear</tag>
+      <tag>supersonic</tag>
+      <tag>afterburner</tag>
+      <tag>jet</tag>
+      <tag>twin-engine</tag>
+    </tags>
   </sim>
 
 </PropertyList>
